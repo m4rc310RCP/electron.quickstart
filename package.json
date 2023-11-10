@@ -1,0 +1,29 @@
+{
+  "name": "electron.quickstart",
+  "version": "1.0.0",
+  "description": "Projeto de referência - ELectron+ReactJs",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/m4rc310RCP/electron.quickstart.git"
+  },
+  "keywords": [
+    "Electron",
+    "React",
+    "Webpack",
+    "Quick",
+    "Start"
+  ],
+  "author": "marcelo.utfpr@me.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/m4rc310RCP/electron.quickstart/issues"
+  },
+  "homepage": "https://github.com/m4rc310RCP/electron.quickstart#readme",
+  "devDependencies": {
+    "electron": "^26.1.0"
+  }
+}
