@@ -1,10 +1,13 @@
 import React, { StrictMode } from 'react';
-import ReactDOM from 'react-dom/client';
+import { createRoot } from 'react-dom/client';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+let div = document.createElement('div');
+div.id = 'root';
+document.body.appendChild(div);
 
+const root = createRoot(document.getElementById('root'));
 root.render(
 	<StrictMode>
-		<div>Root</div>
+		<p>Testando v2</p>
 	</StrictMode>
 );
