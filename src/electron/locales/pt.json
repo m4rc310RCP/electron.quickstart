@@ -1,0 +1,9 @@
+{
+	"hello": "Hello, World!",
+	"greeting": "Welcome to our application.",
+	"change_title": "Alterar Título",
+	"close": "Fechar",
+	"modal": "Uma janela {0} com a função {1}. Usuário: {0}",
+	"restart_app": "Reiniciar",
+	"notification": "Notificação"
+}
