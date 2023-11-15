@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { Modal } from '../../components';
-import { useTranslate } from '../../hooks';
+import { useTranslate, useWindow } from '../../hooks';
 
 export const MAppTest = () => {
 	const [showModalTest, setShowModalTest] = useState(false);
 	const { m, format } = useTranslate();
+	const { closeApp } = useWindow();
+
 
 	const handleNotification = () => {
 		const msg = { title: 'Title Message', body: 'Teste Notification' };
@@ -12,6 +14,7 @@ export const MAppTest = () => {
 	};
 
 	const classNameButtons = 'text-xs bg-slate-400  hover:bg-slate-500 rounded-sm px-2 text-gray-300  gap-1';
+
 
 	return (
 		<div className="flex gap-1 p-2">
@@ -21,7 +24,7 @@ export const MAppTest = () => {
 			<button className={classNameButtons} onClick={() => electron.windowApi.title('Change Title')}>
 				{m.change_title}
 			</button>
-			<button className={classNameButtons} onClick={() => electron.windowApi.close()}>
+			<button className={classNameButtons} onClick={() => closeApp(true)}>
 				{m.close}
 			</button>
 			<button className={classNameButtons} onClick={() => electron.windowApi.restart()}>

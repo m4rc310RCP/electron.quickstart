@@ -10,8 +10,8 @@ contextBridge.exposeInMainWorld('electron', {
 		title(title) {
 			ipcRenderer.send('title', title);
 		},
-		close(confirm) {
-			ipcRenderer.send('close', confirm || true);
+		close(options) {
+			ipcRenderer.send('close', options);
 		},
 		restart() {
 			ipcRenderer.send('restart');

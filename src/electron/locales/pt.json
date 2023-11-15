@@ -3,6 +3,10 @@
 	"greeting": "Welcome to our application.",
 	"change_title": "Alterar Título",
 	"close": "Fechar",
+	"cancel": "Cancelar",
+	"close_application": "Fechar Aplicação",
+	"instruction_before_close": "É importante salvar as alterações realizadas antes de fechar a aplicação.",
+	"question_close_window": "Deseja realmente sair da aplicação?",
 	"modal": "Uma janela {0} com a função {1}. Usuário: {0}",
 	"restart_app": "Reiniciar",
 	"notification": "Notificação"

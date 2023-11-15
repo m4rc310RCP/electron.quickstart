@@ -67,7 +67,8 @@ ipcMain.handle('server_uris', async (_) => {
 	return { auth_uri, sales_uri };
 });
 
-ipcMain.on('close', (_, confirm) => {
+ipcMain.on('close', (_, options) => {
+	/*
 	const options = {
 		type: 'question',
 		buttons: ['Close Apllication', 'Cancel'],
@@ -78,6 +79,9 @@ ipcMain.on('close', (_, confirm) => {
 		checkboxLabel: 'Remember my answer',
 		checkboxChecked: true,
 	};
+	*/
+
+	const {checkboxChecked, confirm} = options;
 
 	if (confirm) {
 		dialog.showMessageBox(null, options).then(({ response, checkboxChecked }) => {
@@ -134,4 +138,4 @@ app.whenReady().then(() => {
 app.on('will-quit', () => globalShortcut.unregisterAll());
 
 const menu = Menu.buildFromTemplate([]);
-Menu.setApplicationMenu(menu);
+//Menu.setApplicationMenu(menu);

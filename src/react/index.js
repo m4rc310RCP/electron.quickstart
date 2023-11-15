@@ -2,7 +2,7 @@ import React, { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 
 import { MAppTest } from './containers';
-import { Mi8nProvider } from './contexts';
+import { MWindowProvider, Mi8nProvider } from './contexts';
 import './style.css';
 
 let div = document.createElement('div');
@@ -19,7 +19,10 @@ const root = createRoot(document.getElementById('root'));
 root.render(
 	<StrictMode>
 		<Mi8nProvider>
+			<MWindowProvider>
 			<MAppTest />
+
+			</MWindowProvider>
 		</Mi8nProvider>
 	</StrictMode>
 );
